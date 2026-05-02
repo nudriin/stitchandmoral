@@ -12,10 +12,35 @@
 }
 
 .navbar.scrolled {
-  background-color: rgba(26, 26, 26, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar.scrolled .navLink {
+  color: var(--color-text);
+}
+
+.navbar.scrolled .navLink:hover {
+  color: var(--color-text-muted);
+}
+
+.navbar.scrolled .logoName {
+  color: var(--color-text);
+}
+
+.navbar.scrolled .logoTagline {
+  color: var(--color-text-muted);
+}
+
+.navbar.scrolled .logoIcon {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.navbar.scrolled .hamburgerLine {
+  background-color: var(--color-primary);
 }
 
 .navContainer {
@@ -31,44 +56,45 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 10px;
   z-index: 1001;
 }
 
 .logoIcon {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   background-color: white;
-  border-radius: var(--radius-md);
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 18px;
+  font-size: 14px;
   color: var(--color-primary);
+  letter-spacing: -0.02em;
 }
 
 .logoText {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .logoName {
   font-family: var(--font-heading);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: 700;
   color: white;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
 }
 
 .logoTagline {
   font-family: var(--font-body);
   font-size: 10px;
   font-weight: 500;
-  color: var(--color-secondary);
-  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -82,38 +108,20 @@
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.01em;
   position: relative;
   padding: var(--space-xs) 0;
   transition: color var(--transition-fast);
-}
-
-.navLink::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background-color: var(--color-secondary);
-  transition: width var(--transition-base);
 }
 
 .navLink:hover {
   color: white;
 }
 
-.navLink:hover::after {
-  width: 100%;
-}
-
 .navCta {
-  composes: btn btn-secondary btn-sm from global;
-  font-size: 12px !important;
+  font-size: 13px !important;
   padding: 10px 24px !important;
-  letter-spacing: 0.08em;
 }
 
 .hamburger {
@@ -121,8 +129,8 @@
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   cursor: pointer;
   z-index: 1001;
   background: none;
@@ -132,7 +140,7 @@
 
 .hamburgerLine {
   width: 100%;
-  height: 2px;
+  height: 1.5px;
   background-color: white;
   transition: all var(--transition-base);
   transform-origin: center;
@@ -155,13 +163,12 @@
   display: none;
   position: fixed;
   inset: 0;
-  background-color: rgba(26, 26, 26, 0.98);
-  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.98);
   z-index: 999;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
   opacity: 0;
   transition: opacity var(--transition-base);
 }
@@ -173,13 +180,15 @@
 
 .mobileLink {
   font-family: var(--font-heading);
-  font-size: var(--text-3xl);
+  font-size: var(--text-2xl);
+  font-weight: 600;
   color: white;
-  transition: color var(--transition-fast);
+  transition: opacity var(--transition-fast);
+  letter-spacing: -0.02em;
 }
 
 .mobileLink:hover {
-  color: var(--color-secondary);
+  opacity: 0.5;
 }
 
 .mobileCta {

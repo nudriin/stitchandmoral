@@ -6,25 +6,15 @@
 }
 
 .cta::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    #2a2a2a 50%,
-    var(--color-primary) 100%
-  );
-  opacity: 1;
+  display: none;
 }
 
 .ctaPattern {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(201, 169, 110, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 60% 80%, rgba(201, 169, 110, 0.06) 0%, transparent 45%);
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
 }
 
 .ctaContent {
@@ -36,21 +26,22 @@
 .ctaTitle {
   font-family: var(--font-heading);
   font-size: var(--text-5xl);
-  font-weight: 700;
+  font-weight: 800;
   color: white;
   margin-bottom: var(--space-md);
-  line-height: 1.15;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .ctaAccent {
-  color: var(--color-secondary);
   font-style: italic;
+  font-weight: 300;
 }
 
 .ctaSubtitle {
   font-size: var(--text-lg);
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 550px;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 500px;
   margin: 0 auto var(--space-2xl);
   line-height: 1.7;
 }
@@ -64,9 +55,9 @@
 }
 
 .ctaDivider {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(to right, transparent, var(--color-secondary), transparent);
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
   margin: 0 auto var(--space-2xl);
 }
 

@@ -1,69 +1,57 @@
 .whyus {
   padding: var(--section-padding);
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .whyusGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-xl);
+  gap: 0;
 }
 
 .whyusCard {
   text-align: center;
   padding: var(--space-2xl) var(--space-lg);
-  background-color: var(--color-bg-card);
-  border: 1px solid var(--color-border-light);
+  border-right: 1px solid var(--color-border);
   transition: all var(--transition-base);
   position: relative;
-  overflow: hidden;
 }
 
-.whyusCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: var(--color-secondary);
-  transform: scaleX(0);
-  transition: transform var(--transition-base);
-}
-
-.whyusCard:hover::before {
-  transform: scaleX(1);
+.whyusCard:last-child {
+  border-right: none;
 }
 
 .whyusCard:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-6px);
+  background-color: var(--color-bg-alt);
 }
 
 .whyusIcon {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   margin: 0 auto var(--space-lg);
-  background-color: rgba(201, 169, 110, 0.1);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  color: var(--color-primary);
   transition: all var(--transition-base);
 }
 
 .whyusCard:hover .whyusIcon {
-  background-color: var(--color-secondary);
-  transform: scale(1.1);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
 }
 
 .whyusTitle {
   font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: 600;
+  font-size: var(--text-base);
+  font-weight: 700;
   margin-bottom: var(--space-sm);
   color: var(--color-text);
+  letter-spacing: -0.02em;
 }
 
 .whyusDesc {
@@ -76,10 +64,28 @@
   .whyusGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .whyusCard:nth-child(2) {
+    border-right: none;
+  }
+
+  .whyusCard:nth-child(1),
+  .whyusCard:nth-child(2) {
+    border-bottom: 1px solid var(--color-border);
+  }
 }
 
 @media (max-width: 480px) {
   .whyusGrid {
     grid-template-columns: 1fr;
+  }
+
+  .whyusCard {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .whyusCard:last-child {
+    border-bottom: none;
   }
 }

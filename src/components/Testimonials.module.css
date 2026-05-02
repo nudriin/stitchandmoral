@@ -8,35 +8,36 @@
 .testimonialsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);
+  gap: 0;
 }
 
 .testimonialCard {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: var(--space-2xl);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   transition: all var(--transition-base);
 }
 
+.testimonialCard:last-child {
+  border-right: none;
+}
+
 .testimonialCard:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(201, 169, 110, 0.3);
-  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .quoteIcon {
   font-family: var(--font-heading);
-  font-size: 60px;
-  color: var(--color-secondary);
-  opacity: 0.3;
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.1);
   line-height: 1;
   margin-bottom: var(--space-md);
 }
 
 .testimonialText {
   font-size: var(--text-base);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.8;
   margin-bottom: var(--space-xl);
   font-style: italic;
@@ -49,16 +50,16 @@
 }
 
 .authorAvatar {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-full);
-  background-color: var(--color-secondary);
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
   color: var(--color-primary);
   flex-shrink: 0;
 }
@@ -76,7 +77,7 @@
 
 .authorEvent {
   font-size: var(--text-xs);
-  color: var(--color-secondary);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .stars {
@@ -86,18 +87,36 @@
 }
 
 .star {
-  color: var(--color-secondary);
-  font-size: var(--text-base);
+  color: white;
+  font-size: var(--text-sm);
 }
 
 @media (max-width: 1024px) {
   .testimonialsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .testimonialCard:nth-child(2) {
+    border-right: none;
+  }
+
+  .testimonialCard:nth-child(1),
+  .testimonialCard:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
 }
 
 @media (max-width: 768px) {
   .testimonialsGrid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonialCard {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .testimonialCard:last-child {
+    border-bottom: none;
   }
 }
