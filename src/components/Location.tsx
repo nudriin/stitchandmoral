@@ -77,25 +77,47 @@ export default function Location() {
             </div>
           </div>
 
-          {/* Map */}
-          <div className={styles.locationMapWrapper}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.7!2d113.9108!3d-2.2136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTInNDkuMCJTIDExM8KwNTQnMzguOSJF!5e0!3m2!1sid!2sid!4v1699999999999"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Lokasi Stitch & Moral di Palangka Raya"
-            ></iframe>
-            <div className={styles.mapOverlay}>
-              <a
-                href="https://maps.google.com/?q=-2.2136,113.9108"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.mapBtn}
-              >
-                <ExternalLink size={14} />
-                Buka di Google Maps
-              </a>
+          {/* Maps */}
+          <div className={styles.locationMaps}>
+            {/* Street View */}
+            <div className={styles.locationMapWrapper}>
+              <div className={styles.mapLabel}>
+                <MapPin size={14} />
+                Street View
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!4v1777756689903!6m8!1m7!1s16cdZ3VntRN9RlEivKmwcg!2m2!1d-2.2184479724925!2d113.9052920744246!3f214.3351559483321!4f-23.372780666736148!5f0.7820865974627469"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Street View Lokasi Stitch & Moral di Palangka Raya"
+              ></iframe>
+            </div>
+
+            {/* Peta */}
+            <div className={styles.locationMapWrapper}>
+              <div className={styles.mapLabel}>
+                <MapPin size={14} />
+                Peta Lokasi
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d996.7069834250551!2d113.90530548546965!3d-2.2184613734859693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1777757098715!5m2!1sen!2sid"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Peta Lokasi Stitch & Moral di Palangka Raya"
+              ></iframe>
+              <div className={styles.mapOverlay}>
+                <a
+                  href="https://maps.google.com/?q=-2.2184,-2.2184613734859693,113.90530548546965"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.mapBtn}
+                >
+                  <ExternalLink size={14} />
+                  Buka di Google Maps
+                </a>
+              </div>
             </div>
           </div>
         </div>
