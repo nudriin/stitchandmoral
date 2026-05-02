@@ -1,0 +1,112 @@
+.process {
+  padding: var(--section-padding);
+  background-color: var(--color-bg);
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.processSteps::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-border)
+  );
+  z-index: 0;
+}
+
+.processStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.stepNumber {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-card);
+  border: 3px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+  transition: all var(--transition-base);
+}
+
+.stepNumber:hover {
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-gold);
+}
+
+.stepNumberInner {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.stepNumber:hover .stepNumberInner {
+  background-color: var(--color-secondary);
+}
+
+.stepIcon {
+  font-size: 28px;
+}
+
+.stepTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.stepDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 200px;
+}
+
+.stepArrow {
+  color: var(--color-secondary);
+  font-size: var(--text-xl);
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 1024px) {
+  .processSteps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+  }
+
+  .processSteps::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .processSteps {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}

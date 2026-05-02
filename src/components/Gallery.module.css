@@ -1,0 +1,143 @@
+.gallery {
+  padding: var(--section-padding);
+  background-color: var(--color-bg);
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.galleryItem {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.galleryItem:nth-child(2) {
+  aspect-ratio: 4 / 5;
+}
+
+.galleryImage {
+  transition: transform var(--transition-slower);
+}
+
+.galleryImage img {
+  object-fit: cover;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.05);
+}
+
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: 2;
+}
+
+.galleryItem:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryIcon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: var(--text-xl);
+  transform: scale(0.8);
+  transition: transform var(--transition-base);
+}
+
+.galleryItem:hover .galleryIcon {
+  transform: scale(1);
+}
+
+.galleryCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg);
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition-base);
+}
+
+.galleryItem:hover .galleryCaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.galleryCaptionText {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  color: white;
+  font-weight: 500;
+}
+
+.galleryFollow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+}
+
+.galleryFollowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.04em;
+  transition: color var(--transition-fast);
+}
+
+.galleryFollowLink:hover {
+  color: var(--color-secondary);
+}
+
+.galleryFollowIcon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .galleryItem:nth-child(3) {
+    grid-column: span 2;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 480px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryItem:nth-child(3) {
+    grid-column: span 1;
+    aspect-ratio: 4 / 5;
+  }
+}
