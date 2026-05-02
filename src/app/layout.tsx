@@ -196,6 +196,7 @@ export default function RootLayout({
         <meta name="geo.placename" content="Palangka Raya" />
         <meta name="geo.position" content="-2.2136;113.9108" />
         <meta name="ICBM" content="-2.2136, 113.9108" />
+        <meta name="google-site-verification" content="BPxxYA52ta7RvOm4afR_giDFbpUKAHwmXK2_5dwXuKo" />
       </head>
       <body>
         {children}
