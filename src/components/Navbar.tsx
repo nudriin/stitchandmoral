@@ -56,7 +56,7 @@ export default function Navbar() {
       >
         <div className={styles.navContainer}>
           <Link href="/" className={styles.logo} aria-label="Stitch & Moral - Beranda">
-            <div className={styles.logoIcon}>SM</div>
+            {/* <div className={styles.logoIcon}>SM</div> */}
             <div className={styles.logoText}>
               <span className={styles.logoName}>Stitch &amp; Moral</span>
               <span className={styles.logoTagline}>Sewa Jas</span>
