@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stitchandmoral.com"),
+  metadataBase: new URL("https://stitchandmoral.vercel.app"),
   title: {
     default:
       "Sewa Jas Palangka Raya | Stitch & Moral — Jas Wisuda, Wedding & Event Formal",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://stitchandmoral.com",
+    url: "https://stitchandmoral.vercel.app",
     siteName: "Stitch & Moral",
     title:
       "Sewa Jas Palangka Raya | Stitch & Moral — Jas Wisuda, Wedding & Event Formal",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://stitchandmoral.com",
+    canonical: "https://stitchandmoral.vercel.app",
   },
   category: "fashion",
 };
@@ -86,8 +86,8 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Stitch & Moral",
   alternateName: "Stitch and Moral Sewa Jas",
-  image: "https://stitchandmoral.com/og-image.png",
-  url: "https://stitchandmoral.com",
+  image: "https://stitchandmoral.vercel.app/og-image.png",
+  url: "https://stitchandmoral.vercel.app",
   telephone: "+6281549193834",
   description:
     "Stitch & Moral menyediakan jasa sewa jas formal pria terlengkap di Palangka Raya untuk wisuda, wedding, pre-wedding, kelulusan, MC & event formal.",
