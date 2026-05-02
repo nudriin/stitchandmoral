@@ -190,7 +190,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#000000" />
         <meta name="geo.region" content="ID-KT" />
         <meta name="geo.placename" content="Palangka Raya" />
