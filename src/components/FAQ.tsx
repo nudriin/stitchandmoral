@@ -72,16 +72,13 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className={styles.faqList} itemScope itemType="https://schema.org/FAQPage">
+        <div className={styles.faqList}>
           {faqs.map((faq, index) => (
             <div
               key={index}
               className={`${styles.faqItem} ${
                 openIndex === index ? styles.active : ""
               }`}
-              itemScope
-              itemProp="mainEntity"
-              itemType="https://schema.org/Question"
             >
               <button
                 className={styles.faqQuestion}
@@ -89,16 +86,11 @@ export default function FAQ() {
                 aria-expanded={openIndex === index}
                 id={`faq-q-${index}`}
               >
-                <span itemProp="name">{faq.q}</span>
+                <span>{faq.q}</span>
                 <span className={styles.faqIcon}>+</span>
               </button>
-              <div
-                className={styles.faqAnswer}
-                itemScope
-                itemProp="acceptedAnswer"
-                itemType="https://schema.org/Answer"
-              >
-                <p className={styles.faqAnswerText} itemProp="text">
+              <div className={styles.faqAnswer}>
+                <p className={styles.faqAnswerText}>
                   {faq.a}
                 </p>
               </div>
