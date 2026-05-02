@@ -1,3 +1,4 @@
+import { MapPin, Phone, Clock, Camera, ExternalLink } from "lucide-react";
 import styles from "./Location.module.css";
 
 export default function Location() {
@@ -18,7 +19,9 @@ export default function Location() {
 
             <div className={styles.locationDetails}>
               <div className={styles.locationDetail}>
-                <div className={styles.detailIcon}>📍</div>
+                <div className={styles.detailIcon}>
+                  <MapPin size={22} />
+                </div>
                 <div className={styles.detailContent}>
                   <span className={styles.detailLabel}>Alamat</span>
                   <span className={styles.detailValue}>
@@ -30,7 +33,9 @@ export default function Location() {
               </div>
 
               <div className={styles.locationDetail}>
-                <div className={styles.detailIcon}>📞</div>
+                <div className={styles.detailIcon}>
+                  <Phone size={22} />
+                </div>
                 <div className={styles.detailContent}>
                   <span className={styles.detailLabel}>Telepon / WhatsApp</span>
                   <span className={styles.detailValue}>
@@ -40,7 +45,9 @@ export default function Location() {
               </div>
 
               <div className={styles.locationDetail}>
-                <div className={styles.detailIcon}>🕐</div>
+                <div className={styles.detailIcon}>
+                  <Clock size={22} />
+                </div>
                 <div className={styles.detailContent}>
                   <span className={styles.detailLabel}>Jam Operasional</span>
                   <span className={styles.detailValue}>
@@ -51,7 +58,9 @@ export default function Location() {
               </div>
 
               <div className={styles.locationDetail}>
-                <div className={styles.detailIcon}>📸</div>
+                <div className={styles.detailIcon}>
+                  <Camera size={22} />
+                </div>
                 <div className={styles.detailContent}>
                   <span className={styles.detailLabel}>Instagram</span>
                   <span className={styles.detailValue}>
@@ -84,7 +93,8 @@ export default function Location() {
                 rel="noopener noreferrer"
                 className={styles.mapBtn}
               >
-                📍 Buka di Google Maps
+                <ExternalLink size={14} />
+                Buka di Google Maps
               </a>
             </div>
           </div>

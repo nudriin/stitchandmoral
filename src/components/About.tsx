@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Check } from "lucide-react";
 import styles from "./About.module.css";
 
 export default function About() {
@@ -49,27 +50,27 @@ export default function About() {
             </p>
             <div className={styles.aboutFeatures}>
               <div className={styles.aboutFeature}>
-                <span className={styles.featureCheck}>✓</span>
+                <span className={styles.featureCheck}><Check size={12} strokeWidth={3} /></span>
                 Kualitas Premium
               </div>
               <div className={styles.aboutFeature}>
-                <span className={styles.featureCheck}>✓</span>
+                <span className={styles.featureCheck}><Check size={12} strokeWidth={3} /></span>
                 Fitting Tersedia
               </div>
               <div className={styles.aboutFeature}>
-                <span className={styles.featureCheck}>✓</span>
+                <span className={styles.featureCheck}><Check size={12} strokeWidth={3} /></span>
                 Harga Terjangkau
               </div>
               <div className={styles.aboutFeature}>
-                <span className={styles.featureCheck}>✓</span>
+                <span className={styles.featureCheck}><Check size={12} strokeWidth={3} /></span>
                 Koleksi Lengkap
               </div>
               <div className={styles.aboutFeature}>
-                <span className={styles.featureCheck}>✓</span>
+                <span className={styles.featureCheck}><Check size={12} strokeWidth={3} /></span>
                 Perawatan Profesional
               </div>
               <div className={styles.aboutFeature}>
-                <span className={styles.featureCheck}>✓</span>
+                <span className={styles.featureCheck}><Check size={12} strokeWidth={3} /></span>
                 Lokasi Strategis
               </div>
             </div>

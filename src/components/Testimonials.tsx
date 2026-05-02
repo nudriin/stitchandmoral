@@ -1,3 +1,4 @@
+import { Star } from "lucide-react";
 import styles from "./Testimonials.module.css";
 
 const testimonials = [
@@ -53,7 +54,7 @@ export default function Testimonials() {
               <div className={styles.stars}>
                 {Array.from({ length: t.stars }).map((_, si) => (
                   <span key={si} className={styles.star}>
-                    ★
+                    <Star size={16} fill="currentColor" strokeWidth={0} />
                   </span>
                 ))}
               </div>

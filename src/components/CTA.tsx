@@ -1,3 +1,4 @@
+import { Phone } from "lucide-react";
 import styles from "./CTA.module.css";
 
 const WHATSAPP_NUMBER = "6281549193834";
@@ -33,7 +34,7 @@ export default function CTA() {
             Chat via WhatsApp
           </a>
           <a href="tel:+6281549193834" className="btn btn-outline btn-lg">
-            📞 081549193834
+            <Phone size={20} /> 081549193834
           </a>
         </div>
       </div>

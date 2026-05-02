@@ -1,23 +1,24 @@
+import { Gem, BadgeDollarSign, Ruler, MapPin } from "lucide-react";
 import styles from "./WhyUs.module.css";
 
 const reasons = [
   {
-    icon: "👔",
+    icon: <Gem size={28} />,
     title: "Kualitas Premium",
     desc: "Setiap jas dipilih dari bahan berkualitas tinggi dan dijaga perawatannya secara profesional.",
   },
   {
-    icon: "💰",
+    icon: <BadgeDollarSign size={28} />,
     title: "Harga Terjangkau",
     desc: "Tampil elegan tanpa perlu merogoh kocek dalam. Harga bersahabat untuk semua kalangan.",
   },
   {
-    icon: "📏",
+    icon: <Ruler size={28} />,
     title: "Fitting Tersedia",
     desc: "Layanan fitting untuk memastikan jas yang Anda pilih pas dan nyaman dipakai.",
   },
   {
-    icon: "📍",
+    icon: <MapPin size={28} />,
     title: "Lokasi Strategis",
     desc: "Berlokasi di pusat Kota Palangka Raya, mudah dijangkau dari berbagai penjuru kota.",
   },

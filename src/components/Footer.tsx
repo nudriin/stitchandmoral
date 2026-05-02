@@ -1,3 +1,4 @@
+import { MapPin, Phone, Clock } from "lucide-react";
 import styles from "./Footer.module.css";
 
 const WHATSAPP_NUMBER = "6281549193834";
@@ -73,7 +74,9 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h4>Hubungi Kami</h4>
             <div className={styles.contactItem}>
-              <span className={styles.contactIcon}>📍</span>
+              <span className={styles.contactIcon}>
+                <MapPin size={16} />
+              </span>
               <span>
                 JL. Pangeran Samudera Induk,<br />
                 Kost Barak Kita no 11,<br />
@@ -81,11 +84,15 @@ export default function Footer() {
               </span>
             </div>
             <div className={styles.contactItem}>
-              <span className={styles.contactIcon}>📞</span>
+              <span className={styles.contactIcon}>
+                <Phone size={16} />
+              </span>
               <a href="tel:+6281549193834" style={{ color: 'inherit' }}>081549193834</a>
             </div>
             <div className={styles.contactItem}>
-              <span className={styles.contactIcon}>🕐</span>
+              <span className={styles.contactIcon}>
+                <Clock size={16} />
+              </span>
               <span>
                 Sen-Sab: 09:00 - 21:00<br />
                 Minggu: 10:00 - 18:00

@@ -1,23 +1,24 @@
+import { Search, Ruler, Sparkles, RotateCcw } from "lucide-react";
 import styles from "./Process.module.css";
 
 const steps = [
   {
-    icon: "🔍",
+    icon: <Search size={28} strokeWidth={2} />,
     title: "Pilih Jas",
     desc: "Pilih jas yang sesuai dengan acara dan selera Anda dari koleksi kami.",
   },
   {
-    icon: "📏",
+    icon: <Ruler size={28} strokeWidth={2} />,
     title: "Fitting",
     desc: "Datang ke toko kami untuk fitting dan memastikan ukuran yang pas.",
   },
   {
-    icon: "✨",
+    icon: <Sparkles size={28} strokeWidth={2} />,
     title: "Sewa & Pakai",
     desc: "Sewa jas pilihan Anda dan tampil memukau di acara Anda.",
   },
   {
-    icon: "🔄",
+    icon: <RotateCcw size={28} strokeWidth={2} />,
     title: "Kembalikan",
     desc: "Kembalikan jas sesuai jadwal. Mudah, praktis, tanpa ribet.",
   },
