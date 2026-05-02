@@ -3,14 +3,14 @@ import styles from "./Testimonials.module.css";
 
 const testimonials = [
   {
-    text: "Jas-nya bagus banget dan terawat. Pas dipakai wisuda, banyak yang tanya sewanya dimana. Highly recommended!",
+    text: "Jas-nya bagus dan terawat. Pas dipakai wisuda, banyak yang tanya sewanya dimana. Highly recommended!",
     name: "Ahmad Rizky",
     event: "Wisuda UPR 2024",
     initials: "AR",
     stars: 5,
   },
   {
-    text: "Pelayanannya ramah dan fitting-nya nyaman. Jas yang saya pakai untuk wedding terasa premium banget. Terima kasih Stitch & Moral!",
+    text: "Pelayanannya ramah dan fitting-nya nyaman. Jas yang saya pakai untuk wedding terasa premium. Terima kasih Stitch & Moral!",
     name: "Dimas Pratama",
     event: "Wedding 2024",
     initials: "DP",
